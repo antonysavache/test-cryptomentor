@@ -102,65 +102,12 @@
             Это поможет быстро понять, в каком направлении движется биржа и с какими вызовами она сталкивается.
           </p>
 
-          <div class="pros-cons-grid mb-lg">
-            <!-- Pros -->
-            <div class="card pros-card">
-              <div class="card-header">
-                <div class="icon-circle success-icon">✓</div>
-                <h3 class="h3 text-success">Плюсы: Почему остается топовым выбором</h3>
-              </div>
-
-              <ul class="list-clean">
-                <li class="pros-item mb-md">
-                  <strong>Непревзойденная ликвидность</strong><br>
-                  <span class="text-light">Binance остается биржей №1 по объему торгов, что гарантирует быстрое исполнение ордеров по выгодным ценам</span>
-                </li>
-                <li class="pros-item mb-md">
-                  <strong>Огромный выбор активов</strong><br>
-                  <span class="text-light">Более 500+ криптовалют и тысячи торговых пар — настоящий рай для диверсификации портфеля</span>
-                </li>
-                <li class="pros-item mb-md">
-                  <strong>Низкие торговые комиссии</strong><br>
-                  <span class="text-light">Стандартная комиссия в 0.1% (которую можно снизить) — одна из самых конкурентных на рынке</span>
-                </li>
-                <li class="pros-item mb-md">
-                  <strong>Комплексная экосистема</strong><br>
-                  <span class="text-light">Не просто биржа, а целый финансовый хаб с возможностями для стейкинга, фарминга, NFT-маркетплейсом</span>
-                </li>
-                <li class="pros-item">
-                  <strong>Инновации и развитие</strong><br>
-                  <span class="text-light">Постоянно внедряет новые продукты и улучшает существующие</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Cons -->
-            <div class="card cons-card">
-              <div class="card-header">
-                <div class="icon-circle danger-icon">✗</div>
-                <h3 class="h3 text-danger">Минусы: Риски и недостатки в 2025</h3>
-              </div>
-
-              <ul class="list-clean">
-                <li class="cons-item mb-md">
-                  <strong>Регуляторное давление</strong><br>
-                  <span class="text-light">Новые законы, как MiCA в Европе, заставляют биржу менять список доступных активов</span>
-                </li>
-                <li class="cons-item mb-md">
-                  <strong>Ограничения для некоторых стран</strong><br>
-                  <span class="text-light">Недоступна или имеет ограниченный функционал в США, Канаде и Великобритании</span>
-                </li>
-                <li class="cons-item mb-md">
-                  <strong>Перегруженный интерфейс</strong><br>
-                  <span class="text-light">Обилие функций может сбить с толку начинающих пользователей</span>
-                </li>
-                <li class="cons-item">
-                  <strong>Репутационные риски</strong><br>
-                  <span class="text-light">Шлейф регуляторных расследований все еще влияет на восприятие биржи</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <app-high-level-compare-two-cards
+            prosMainHeader="Плюсы: Почему остается топовым выбором"
+            consMainHeader="Минусы: Риски и недостатки в 2025"
+            [pros]="prosData"
+            [cons]="consData">
+          </app-high-level-compare-two-cards>
         </section>
 
         <!-- Binance Fees Section -->
@@ -264,7 +211,7 @@
           <div id="security-features" class="subsection mb-lg">
             <h3 class="h3 mb-md">Основные функции безопасности</h3>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+            <div class="security-grid">
               <div class="card">
                 <div class="card-body">
                   <h5 class="text-primary">🔐 2FA</h5>
@@ -313,7 +260,7 @@
           <!-- Regulatory Challenges -->
           <h3 class="h3 mb-md">Глобальные регуляторные вызовы</h3>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
+          <div class="regulatory-grid">
             <div class="card">
               <div class="card-body">
                 <h5 class="text-warning">Европа (MiCA)</h5>
@@ -393,7 +340,7 @@
           <div class="subsection mb-lg">
             <h3 class="h3 mb-md">Дополнительные возможности</h3>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
+            <div class="ecosystem-grid">
               <div class="card">
                 <div class="card-body">
                   <h5 class="text-primary">Launchpad</h5>
@@ -478,55 +425,12 @@
             Однако она больше не является универсальным решением для всех.
           </p>
 
-          <div class="verdict-grid">
-            <!-- Who Should Use -->
-            <div class="card verdict-card">
-              <div class="card-header">
-                <div class="icon-circle success-icon">✓</div>
-                <h3 class="h3 text-success">Кому стоит использовать Binance</h3>
-              </div>
-              <ul class="list-clean">
-                <li class="mb-sm">
-                  <strong>Активным трейдерам и скальперам</strong><br>
-                  <span class="text-light">Из-за сверхнизких комиссий на фьючерсы и высокой ликвидности</span>
-                </li>
-                <li class="mb-sm">
-                  <strong>"Охотникам за гемами"</strong><br>
-                  <span class="text-light">Огромный выбор альткоинов и доступ к новым проектам через Launchpad</span>
-                </li>
-                <li class="mb-sm">
-                  <strong>Долгосрочным инвесторам</strong><br>
-                  <span class="text-light">Широкие возможности для пассивного дохода через Binance Earn</span>
-                </li>
-                <li>
-                  <strong>Пользователям за пределами ограниченных регионов</strong><br>
-                  <span class="text-light">Которые хотят доступ ко всей экосистеме</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Who Should Avoid -->
-            <div class="card verdict-card">
-              <div class="card-header">
-                <div class="icon-circle danger-icon">✗</div>
-                <h3 class="h3 text-danger">Кому стоит избегать Binance</h3>
-              </div>
-              <ul class="list-clean">
-                <li class="mb-sm">
-                  <strong>Абсолютным новичкам</strong><br>
-                  <span class="text-light">Которых пугает сложность — Coinbase или Kraken могут быть лучшим стартом</span>
-                </li>
-                <li class="mb-sm">
-                  <strong>Пользователям из США, Канады, Великобритании</strong><br>
-                  <span class="text-light">Глобальная платформа недоступна, локальные версии сильно урезаны</span>
-                </li>
-                <li>
-                  <strong>Максималистам безопасности и децентрализации</strong><br>
-                  <span class="text-light">Лучше использовать DEX в связке с холодным кошельком</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <app-high-level-compare-two-cards
+            prosMainHeader="Кому стоит использовать Binance"
+            consMainHeader="Кому стоит избегать Binance"
+            [pros]="whoShouldUseBinanceData"
+            [cons]="whoShouldAvoidBinanceData"
+          />
 
           <!-- Final CTA -->
           <div class="final-cta text-center mt-lg">
