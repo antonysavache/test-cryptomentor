@@ -1,0 +1,31 @@
+<div class="pros-cons-grid mb-lg">
+  <!-- Pros -->
+  <div class="card pros-card">
+    <div class="card-header">
+      <div class="icon-circle success-icon">✓</div>
+      <h3 class="h3 text-success">{{ prosMainHeader }}</h3>
+    </div>
+
+    <ul class="list-clean">
+      <li class="pros-item mb-md" *ngFor="let item of pros">
+        <strong>{{ item.header }}</strong><br>
+        <span class="text-light">{{ item.text }}</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Cons -->
+  <div class="card cons-card">
+    <div class="card-header">
+      <div class="icon-circle danger-icon">✗</div>
+      <h3 class="h3 text-danger">{{ consMainHeader }}</h3>
+    </div>
+
+    <ul class="list-clean">
+      <li class="cons-item mb-md" *ngFor="let item of cons">
+        <strong>{{ item.header }}</strong><br>
+        <span class="text-light">{{ item.text }}</span>
+      </li>
+    </ul>
+  </div>
+</div>
