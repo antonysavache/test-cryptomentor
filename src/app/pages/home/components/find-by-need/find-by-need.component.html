@@ -1,0 +1,36 @@
+<section style="padding: 64px 0; background: white;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <div style="text-align: center; margin-bottom: 48px;">
+      <h2 style="font-size: 36px; font-weight: bold; color: #1f2937; margin-bottom: 16px;">Find the Right Exchange for Your Needs</h2>
+      <p style="font-size: 18px; color: #6b7280;">
+        Discover exchanges tailored to your specific trading requirements
+      </p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+      <div *ngFor="let category of categories" style="background: white; border-radius: 12px; padding: 24px; border: 1px solid #e5e7eb; box-shadow: 0 1px 3px rgba(0,0,0,0.1); cursor: pointer; transition: all 0.3s;"
+           onmouseover="this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'; this.style.transform='translateY(-2px)'"
+           onmouseout="this.style.boxShadow='0 1px 3px rgba(0,0,0,0.1)'; this.style.transform='translateY(0)'">
+
+        <div style="width: 48px; height: 48px; background: #dbeafe; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+          <span style="color: #3b82f6; font-size: 20px;">💰</span>
+        </div>
+
+        <h4 style="font-size: 18px; font-weight: 600; color: #1f2937; margin-bottom: 8px;">{{ category.title }}</h4>
+
+        <p style="color: #6b7280; font-size: 14px; margin-bottom: 16px;">{{ category.description }}</p>
+
+        <ul style="font-size: 14px; color: #6b7280; margin-bottom: 16px; padding: 0; list-style: none;">
+          <li *ngFor="let benefit of category.benefits" style="display: flex; align-items: center; margin-bottom: 4px;">
+            <span style="color: #16a34a; margin-right: 8px;">✓</span>
+            {{ benefit }}
+          </li>
+        </ul>
+
+        <div style="color: #3b82f6; font-weight: 500; font-size: 14px;">
+          Explore Options →
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

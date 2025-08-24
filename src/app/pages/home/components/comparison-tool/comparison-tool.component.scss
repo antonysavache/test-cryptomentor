@@ -1,0 +1,148 @@
+.comparison-tool {
+  padding: 40px;
+
+  .tool-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+
+    .tool-header {
+      margin-bottom: 40px;
+
+      h2 {
+        font-size: 32px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 12px;
+      }
+
+      p {
+        font-size: 18px;
+        color: #6b7280;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.comparison-preview {
+  background: white;
+  border: 2px dashed #d1d5db;
+  border-radius: 12px;
+  padding: 40px 20px;
+
+  .exchange-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 32px;
+
+    .selector-box {
+      width: 200px;
+      height: 120px;
+      border: 2px dashed #9ca3af;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-color: #3b82f6;
+        background: rgba(59, 130, 246, 0.05);
+      }
+
+      .plus-icon {
+        font-size: 32px;
+        color: #9ca3af;
+        font-weight: 300;
+      }
+
+      .selector-text {
+        font-size: 14px;
+        color: #6b7280;
+        font-weight: 500;
+      }
+    }
+
+    .vs-text {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1a1a1a;
+      background: #f3f4f6;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .comparison-features {
+    margin-bottom: 32px;
+
+    .feature-list {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+
+      .feature-item {
+        background: #f8fafc;
+        color: #4b5563;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .start-comparison-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .comparison-tool {
+    padding: 24px 16px;
+
+    .tool-content .tool-header h2 {
+      font-size: 24px;
+    }
+  }
+
+  .comparison-preview {
+    padding: 24px 16px;
+
+    .exchange-selector {
+      flex-direction: column;
+      gap: 20px;
+
+      .vs-text {
+        transform: rotate(90deg);
+      }
+    }
+
+    .comparison-features .feature-list {
+      gap: 12px;
+    }
+  }
+}

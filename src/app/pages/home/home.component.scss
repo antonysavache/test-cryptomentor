@@ -1,0 +1,15 @@
+// TailwindCSS handles all styling
+// Home page specific styles if needed
+
+// Ensure proper spacing between sections
+:host {
+  display: block;
+}
+
+// Smooth scrolling behavior
+html {
+  scroll-behavior: smooth;
+}
+
+// Custom section spacing can be handled by individual components
+// Each component manages its own padding/margin with Tailwind classes

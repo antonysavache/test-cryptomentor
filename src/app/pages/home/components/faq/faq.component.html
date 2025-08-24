@@ -1,0 +1,41 @@
+<section style="padding: 64px 0; background: white;">
+  <div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
+    <div style="text-align: center; margin-bottom: 48px;">
+      <h2 style="font-size: 36px; font-weight: bold; color: #1f2937; margin-bottom: 16px;">Frequently Asked Questions</h2>
+      <p style="font-size: 18px; color: #6b7280;">
+        Get answers to the most common questions about crypto exchanges
+      </p>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <div *ngFor="let faq of faqs; let i = index" style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden;">
+        <button
+          (click)="toggleFAQ(i)"
+          style="width: 100%; padding: 20px; text-align: left; background: none; border: none; cursor: pointer; outline: none;">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <h3 style="font-size: 18px; font-weight: 600; color: #1f2937; margin: 0; padding-right: 16px;">{{ faq.question }}</h3>
+            <span style="color: #6b7280; font-size: 18px; transition: transform 0.2s;"
+                  [style.transform]="faq.isOpen ? 'rotate(180deg)' : 'rotate(0deg)'">▼</span>
+          </div>
+        </button>
+
+        <div *ngIf="faq.isOpen" style="padding: 0 20px 20px; border-top: 1px solid #f3f4f6;">
+          <p style="color: #6b7280; margin: 16px 0 0; line-height: 1.6;">{{ faq.answer }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 48px; text-align: center; background: #f9fafb; border-radius: 12px; padding: 32px;">
+      <h3 style="font-size: 20px; font-weight: 600; color: #1f2937; margin-bottom: 16px;">Still Have Questions?</h3>
+      <p style="color: #6b7280; margin-bottom: 24px;">Can't find what you're looking for? We're here to help.</p>
+      <div style="display: flex; flex-direction: column; gap: 16px; justify-content: center; align-items: center;">
+        <button style="padding: 12px 24px; border: 1px solid #d1d5db; border-radius: 8px; color: #374151; background: white; cursor: pointer; margin-right: 8px;">
+          Contact Support
+        </button>
+        <button style="padding: 12px 24px; background: #3b82f6; color: white; border-radius: 8px; border: none; cursor: pointer;">
+          View Guides
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+<section style="padding: 64px 0; background: #f9fafb;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <div style="text-center: center; margin-bottom: 48px;">
+      <h2 style="font-size: 36px; font-weight: bold; color: #1f2937; margin-bottom: 16px;">Top Rankings</h2>
+      <p style="font-size: 18px; color: #6b7280;">Discover the best crypto exchanges across different categories</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-bottom: 32px;">
+      <div *ngFor="let category of categories" style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e5e7eb;">
+        <h3 style="font-size: 18px; font-weight: 600; color: #1f2937; margin-bottom: 16px;">{{ category.title }}</h3>
+
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div *ngFor="let exchange of category.exchanges; let i = index"
+               style="display: flex; align-items: center; justify-content: space-between; padding: 12px; background: #f9fafb; border-radius: 8px;">
+            <div style="display: flex; align-items: center;">
+              <span style="width: 24px; height: 24px; background: #dbeafe; color: #2563eb; font-size: 12px; font-weight: bold; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                {{ i + 1 }}
+              </span>
+              <span style="font-weight: 500; color: #1f2937;">{{ exchange.name }}</span>
+            </div>
+            <span style="font-size: 14px; font-weight: 600; color: #16a34a;">{{ exchange.score }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center;">
+      <button style="padding: 12px 32px; background: #3b82f6; color: white; border-radius: 8px; border: none; font-weight: 500; cursor: pointer;">
+        View All Rankings
+      </button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+// TailwindCSS handles most styling
+// Additional custom animations and effects
+
+// Floating animation for background elements
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+// Enhanced focus states
+input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+// Smooth backdrop blur effect
+@supports (backdrop-filter: blur(10px)) {
+  .backdrop-blur-sm {
+    backdrop-filter: blur(10px);
+  }
+}

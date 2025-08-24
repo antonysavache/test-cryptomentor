@@ -1,0 +1,4 @@
+.main-content {
+  min-height: calc(100vh - 60px); /* Header (60px) */
+  flex: 1;
+}

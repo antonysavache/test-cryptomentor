@@ -1,0 +1,37 @@
+<!-- Article Hero Component -->
+<div class="article-hero">
+  <!-- Hero Section -->
+  <div class="hero-main bg-dark">
+    <div class="container">
+      <div class="hero-content text-center">
+        <h1 class="h1 hero-title mb-md">{{ title }}</h1>
+        <p class="hero-subtitle mb-lg text-light">{{ subtitle }}</p>
+
+        <!-- CTA Button -->
+        <button class="btn btn-primary cta-btn mb-lg" *ngIf="ctaText" (click)="onCtaClick()">
+          {{ ctaText }}
+          <span class="cta-arrow">→</span>
+        </button>
+
+        <!-- Author Info -->
+        <div class="author-section flex flex-center">
+          <div class="author-avatar rounded">
+            <img [src]="authorAvatar || '/assets/default-avatar.png'" [alt]="authorName">
+          </div>
+          <div class="author-details">
+            <div class="author-line mb-sm">
+              <span class="author-label text-light">Written by</span>
+              <span class="author-name">{{ authorName }}</span>
+              <span class="author-title text-light">{{ authorTitle }}</span>
+              <span class="badge badge-success fact-check" *ngIf="factChecked">✓ Fact Checked</span>
+            </div>
+            <div class="update-info">
+              <span class="update-label text-light">Last Updated:</span>
+              <span class="update-date">{{ lastUpdated }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

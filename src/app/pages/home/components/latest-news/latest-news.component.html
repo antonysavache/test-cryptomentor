@@ -1,0 +1,16 @@
+<div class="latest-news">
+  <div class="section-header">
+    <h2>Latest News</h2>
+    <p>Real-time updates</p>
+  </div>
+  
+  <div class="news-feed">
+    <div class="news-item" *ngFor="let item of newsItems">
+      <div class="news-meta">
+        <span class="time">{{ item.time }}</span>
+        <span class="sentiment-dot" [class]="item.sentiment"></span>
+      </div>
+      <h3 class="news-title">{{ item.title }}</h3>
+    </div>
+  </div>
+</div>

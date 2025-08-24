@@ -1,0 +1,68 @@
+<!-- Exchange Sidebar Component -->
+<div class="sidebar-container">
+    <!-- Recommended Exchanges Section -->
+    <div class="sidebar-section">
+        <h3 class="h3 sidebar-title mb-md">{{ title }}</h3>
+
+        <div class="exchanges-list">
+            <div
+                    class="exchange-item card mb-sm"
+                    *ngFor="let exchange of exchanges"
+                    (click)="onExchangeClick(exchange.link)">
+
+                <div class="exchange-content flex flex-between">
+                    <div class="exchange-info flex gap">
+                        <div class="exchange-logo">{{ exchange.logo }}</div>
+                        <div class="exchange-details">
+                            <div class="exchange-name">{{ exchange.name }}</div>
+                            <div class="exchange-rating flex gap">
+                                <span class="rating-star">⭐</span>
+                                <span class="rating-value">{{ exchange.rating }}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-read-review btn btn-primary">
+                        Read review
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="see-more-section text-center">
+            <button
+                    class="btn-see-more text-primary"
+                    (click)="onSeeMoreClick()">
+                See BEST-RATED Exchanges
+            </button>
+        </div>
+    </div>
+
+    <!-- How we review section -->
+    <div class="sidebar-section">
+        <h4 class="sidebar-subtitle mb-md">How we review crypto exchanges</h4>
+
+        <div class="review-steps">
+            <div
+                    class="review-step mb-sm"
+                    *ngFor="let step of reviewSteps">
+
+                <div class="step-content flex gap">
+                    <div class="step-number badge badge-primary">{{ step.step }}</div>
+                    <div class="step-text">
+                        <span class="step-title">{{ step.title }}</span>
+                        <span class="step-description" *ngIf="step.description">{{ step.description }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="see-more-section text-center">
+            <button
+                    class="btn-see-more text-primary"
+                    (click)="onSeeMoreClick()">
+                See BEST-RATED Exchanges
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+/* Подключаем SCSS файлы */
+@use './styles/toolkit.scss';
+@use './styles/normalize.scss';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+* {
+  box-sizing: border-box;
+}

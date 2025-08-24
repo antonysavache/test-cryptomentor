@@ -1,0 +1,65 @@
+<!-- Article Footer Component -->
+<div class="article-footer-container">
+
+  <!-- About Author Section -->
+  <div class="author-section">
+    <h3 class="h3 author-section-title mb-md">About Article's Experts & Analysts</h3>
+
+    <div class="author-card card">
+      <div class="author-info flex gap">
+        <!-- Author Avatar -->
+        <div class="author-avatar rounded">
+          <img [src]="authorAvatar || '/assets/default-avatar.png'" [alt]="authorName">
+        </div>
+
+        <!-- Author Details -->
+        <div class="author-details">
+          <div class="author-header mb-sm">
+            <span class="author-by text-light">By</span>
+            <span class="author-name">{{ authorName }}</span>
+          </div>
+
+          <div class="author-role mb-sm">
+            <span class="role-title text-light">{{ authorTitle }}</span>
+          </div>
+
+          <!-- Social Links -->
+          <div class="social-links mb-md">
+            <button
+              class="social-link"
+              *ngFor="let social of socialLinks"
+              (click)="onSocialLinkClick(social.url)"
+              [title]="social.platform">
+              {{ social.icon }}
+            </button>
+          </div>
+
+          <!-- Author Bio -->
+          <div class="author-bio mb-md">
+            <p class="bio-text">{{ authorFullBio }}</p>
+            <button class="btn-full-bio text-primary" (click)="onFullBioClick()">
+              Full Bio
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Expert Contributors Link -->
+    <div class="expert-contributors text-center">
+      <p class="expert-text mb-sm">
+        Behind every content piece, there is an Expert.
+      </p>
+      <button
+        class="btn-expert-link text-primary"
+        (click)="onExpertContributorsClick()">
+        Learn About Our Expert Contributors & Analysts
+      </button>
+    </div>
+  </div>
+
+  <!-- Simple Disclaimer -->
+  <div class="simple-disclaimer">
+    <p class="disclaimer-text">{{ disclaimerText }}</p>
+  </div>
+</div>

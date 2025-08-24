@@ -1,0 +1,66 @@
+<section style="background: linear-gradient(135deg, #3b82f6, #8b5cf6); padding: 80px 0; color: white; text-align: center;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <div style="margin-bottom: 40px;">
+      <h1 style="font-size: 48px; font-weight: bold; margin-bottom: 24px; line-height: 1.2;">
+        {{ title }}
+      </h1>
+      <p style="font-size: 20px; opacity: 0.9; max-width: 600px; margin: 0 auto;">
+        {{ subtitle }}
+      </p>
+    </div>
+
+    <div style="max-width: 600px; margin: 0 auto 40px;">
+      <div style="background: white; border-radius: 12px; padding: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+        <div style="display: flex; gap: 8px;">
+          <input
+            type="text"
+            [(ngModel)]="searchTerm"
+            [placeholder]="searchPlaceholder"
+            (keypress)="onKeyPress($event)"
+            style="flex: 1; padding: 16px 20px; border: none; outline: none; font-size: 16px; color: #333; border-radius: 8px;"
+          >
+          <button
+            (click)="onSearch()"
+            style="padding: 16px 24px; background: #3b82f6; color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 32px;">
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 20px;">
+        <span style="opacity: 0.8; font-weight: 500;">Popular:</span>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+          <button
+            *ngFor="let exchange of popularExchanges"
+            (click)="onExchangeClick(exchange.name)"
+            style="padding: 8px 16px; background: rgba(255,255,255,0.2); color: white; border: none; border-radius: 20px; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s;"
+          >
+            {{ exchange.name }}
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; opacity: 0.8;">
+      <div style="text-align: center;">
+        <div style="font-size: 28px; font-weight: bold; color: white;">200+</div>
+        <div style="font-size: 14px;">Exchanges Reviewed</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 28px; font-weight: bold; color: white;">50M+</div>
+        <div style="font-size: 14px;">Monthly Visitors</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 28px; font-weight: bold; color: white;">24/7</div>
+        <div style="font-size: 14px;">Updated Reviews</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 28px; font-weight: bold; color: white;">100%</div>
+        <div style="font-size: 14px;">Unbiased Reviews</div>
+      </div>
+    </div>
+  </div>
+</section>
